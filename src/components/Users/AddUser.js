@@ -34,7 +34,7 @@ function AddUser(props) {
         <input id="username" type="text" onChange={changeHandler} />
         <label htmlFor="age">Age(Years)</label>
         <input id="age" type="number" onChange={changeHandler} />
-        <Button/>
+        <Button type="submit">Add user</Button>
       </form>
       {(!user.username || !user.age)  && <ErrorModal />}
     </div>

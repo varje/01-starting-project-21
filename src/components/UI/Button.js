@@ -1,9 +1,13 @@
 import classes from './Button.module.css';
 
-function Button() {
+function Button(props) {
   return (
-    <button type="submit" className={classes.button}>
-      Add User
+    <button
+      onClick={props.onClick}
+      type={props.type || 'button'}
+      className={classes.button}
+    >
+      {props.children}
     </button>
   );
 }
