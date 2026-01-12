@@ -2,10 +2,10 @@ import classes from './UsersList.module.css';
 
 function UsersList({ users }) {
   return (
-    <div className={classes.usersList}>
+    <div className={classes.users}>
       <ul>
         {users.map((user) => (
-          <li key={user.id}>
+          <li key={user.username}>
             {user.username} ({user.age} years old)
           </li>
         ))}

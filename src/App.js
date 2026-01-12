@@ -18,7 +18,7 @@ function App() {
       <Card className={classes.input}>
         <AddUser onAddUser={addUserHandler} />
       </Card>
-      <Card>
+      <Card className={classes.users}>
         <UsersList users={users}/>
       </Card>
     </div>

@@ -1,15 +1,16 @@
-.usersList {
-  display: block;
-  margin-top: 50px;
+.users {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
 }
 
-.usersList ul {
-  list-style-type: none;
-  padding: 0;
+.users ul {
+  list-style: none;
+  padding: 1rem;
 }
 
-.usersList li {
-  border: 1px solid black;
-  padding: 5px;
-  margin: 5px;
+.users li {
+  border: 1px solid #ccc;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
 }
