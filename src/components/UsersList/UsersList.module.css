@@ -1,5 +1,15 @@
 .usersList {
   display: block;
-  border: 1px solid black;
   margin-top: 50px;
+}
+
+.usersList ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.usersList li {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
 }

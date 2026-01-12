@@ -1,15 +1,17 @@
 import classes from './UsersList.module.css';
 
-function UsersList() {
-    return (
-        <div className={classes.usersList}>
-            <ul>
-                <li>
-                    <p>Varje (33 years old)</p>
-                </li>
-            </ul>
-        </div>
-    )
+function UsersList({ users }) {
+  return (
+    <div className={classes.usersList}>
+      <ul>
+        {users.map((user) => (
+          <li key={user.id}>
+            {user.username} ({user.age} years old)
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default UsersList;

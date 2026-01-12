@@ -18,7 +18,7 @@ function App() {
         <AddUser onAddUser={addUserHandler} />
       </Card>
       <Card>
-        <UsersList />
+        <UsersList users={users}/>
       </Card>
     </div>
   );
