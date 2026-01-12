@@ -11,9 +11,14 @@ function AddUser(props) {
 
   function submitHandler(event) {
     event.preventDefault();
-    if (user.username && user.age) {
-      props.onAddUser(user);
+    if (
+      user.username.trim().length === 0 ||
+      user.age.trim().length === 0 ||
+      +user.age < 1
+    ) {
+      return;
     }
+    props.onAddUser(user);
     console.log(user);
     setUser({ username: '', age: '' });
   }
