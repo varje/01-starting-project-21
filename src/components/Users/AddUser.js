@@ -15,6 +15,7 @@ function AddUser(props) {
       props.onAddUser(user);
     }
     console.log(user);
+    setUser({ username: '', age: '' });
   }
 
   function changeHandler(event) {
@@ -31,12 +32,22 @@ function AddUser(props) {
     <div className={classes.input}>
       <form onSubmit={submitHandler}>
         <label htmlFor="username">Username</label>
-        <input id="username" type="text" onChange={changeHandler} />
+        <input
+          id="username"
+          type="text"
+          value={user.username}
+          onChange={changeHandler}
+        />
         <label htmlFor="age">Age(Years)</label>
-        <input id="age" type="number" onChange={changeHandler} />
+        <input
+          id="age"
+          type="number"
+          value={user.age}
+          onChange={changeHandler}
+        />
         <Button type="submit">Add user</Button>
       </form>
-      {(!user.username || !user.age)  && <ErrorModal />}
+      {(!user.username || !user.age) && <ErrorModal />}
     </div>
   );
 }
