@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AddUser from './components/AddUser/AddUser';
 import UsersList from './components/UsersList/UsersList';
 import Card from './components/Card/Card';
+import ErrorModal from './components/ErrorModal';
 
 function App() {
   const [users, setUsers] = useState([]);

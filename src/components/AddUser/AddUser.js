@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import classes from './AddUser.module.css';
+import ErrorModal from '../ErrorModal';
 
 function AddUser(props) {
   const [user, setUser] = useState({
@@ -9,7 +10,10 @@ function AddUser(props) {
 
   function submitHandler(event) {
     event.preventDefault();
-    props.onAddUser(user);
+    if (user.username && user.age) {
+      props.onAddUser(user);
+    }
+    console.log(user);
   }
 
   function changeHandler(event) {
@@ -31,6 +35,7 @@ function AddUser(props) {
         <input id="age" type="number" onChange={changeHandler} />
         <button>Add User</button>
       </form>
+      {(!user.username || !user.age)  && <ErrorModal />}
     </div>
   );
 }
