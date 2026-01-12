@@ -27,13 +27,13 @@ function AddUser(props) {
   }
 
   return (
-    <div className={classes.addUser}>
+    <div className={classes.input}>
       <form onSubmit={submitHandler}>
         <label htmlFor="username">Username</label>
         <input id="username" type="text" onChange={changeHandler} />
         <label htmlFor="age">Age(Years)</label>
         <input id="age" type="number" onChange={changeHandler} />
-        <button>Add User</button>
+        <button type="submit">Add User</button>
       </form>
       {(!user.username || !user.age)  && <ErrorModal />}
     </div>

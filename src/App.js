@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import AddUser from './components/Users/AddUser';
 import UsersList from './components/Users/UsersList';
-import Card from './components/Card/Card';
-import ErrorModal from './components/ErrorModal';
+import Card from './components/UI/Card';
+import classes from './components/Users/AddUser.module.css'
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div>
-      <Card>
+      <Card className={classes.input}>
         <AddUser onAddUser={addUserHandler} />
       </Card>
       <Card>
