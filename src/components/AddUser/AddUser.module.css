@@ -1,0 +1,14 @@
+.addUser label {
+  display: block;
+  font-weight: bold;
+}
+
+.addUser input {
+  margin: 0.5rem;
+}
+
+.addUser button {
+  display: block;
+  background-color: blueviolet;
+  color: white;
+}
