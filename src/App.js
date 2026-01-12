@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import AddUser from './components/AddUser/AddUser';
-import UsersList from './components/UsersList/UsersList';
+import AddUser from './components/Users/AddUser';
+import UsersList from './components/Users/UsersList';
 import Card from './components/Card/Card';
 import ErrorModal from './components/ErrorModal';
 
